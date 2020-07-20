@@ -15,6 +15,12 @@ let vm = new Vue({
         { day: "Sabado", value: 10000 },
         { day: "Domingo", value: 10200 },
       ],
+      showPrices: false,
     };
+  },
+  methods: {
+    togleShowprices() {
+      this.showPrices = !this.showPrices;
+    },
   },
 });
