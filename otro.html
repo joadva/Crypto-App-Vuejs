@@ -16,7 +16,7 @@
       <span v-else-if="changePercent <0">🐸</span>
       <span v-else> Awa de UWU</span>
 
-      <span v-on:click="togleShowprices">Ver Precios</span>
+      <span v-on:click="togleShowprices"> {{showPrices ? '🖤' :'🤚'}} </span>
 
       <ul v-show="showPrices">
         <!-- <li v-for="(p,i) in prices" v-bind:key="p">
