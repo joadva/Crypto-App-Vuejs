@@ -10,14 +10,19 @@
   </head>
   <body>
     <div id="app">
-      <img v-bind:src="img" v-blind:alt="name" />
-      <h1>{{name}}</h1>
-      <span v-if="changePercent > 0">🧎</span>
-      <span v-else-if="changePercent <0">🐸</span>
-      <span v-else> Awa de UWU</span>
+      <img
+        v-on:mouseover="togleShowprices"
+        v-bind:src="img"
+        v-blind:alt="name"
+      />
+      <h1>
+        {{name}}
+        <span v-if="changePercent > 0">🧎</span>
+        <span v-else-if="changePercent <0">🐸</span>
+        <span v-else> Awa de UWU</span>
 
-      <span v-on:click="togleShowprices"> {{showPrices ? '🖤' :'🤚'}} </span>
-
+        <span v-on:click="togleShowprices"> {{showPrices ? '🖤' :'🤚'}} </span>
+      </h1>
       <ul v-show="showPrices">
         <!-- <li v-for="(p,i) in prices" v-bind:key="p">
           {{i}}-{{p}}
